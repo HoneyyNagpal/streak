@@ -1,17 +1,30 @@
-# habit_tracker
+# Streak
 
-A new Flutter project.
+A minimal, calendar-driven habit tracker built in Flutter.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Add, edit, and delete daily habits with custom colors
+- Track completion with a single tap
+- Automatic streak calculation (current streak + all-time best streak)
+- 12-week calendar heatmap per habit tap any past day to mark it done or undone
+- Completion rate over the last 30 days
+- Local persistence via `shared_preferences`, no backend required
 
-A few resources to get you started if this is your first Flutter project:
+## Stack
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter / Dart
+- `shared_preferences` for local storage
+- No external state management library — built with native `StatefulWidget` + `setState`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Running locally
+
+```bash
+flutter pub get
+flutter run -d chrome   # or any connected device
+```
+
+## Screens
+
+- **Today** - today's habits with quick toggle and daily progress bar
+- **Habit Detail** - streak stats, completion rate, and a full history heatmap with edit/delete
